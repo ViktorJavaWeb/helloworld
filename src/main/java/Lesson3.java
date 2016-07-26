@@ -24,7 +24,7 @@ public class Lesson3 {
     }
 
      /*2. Создать программу, выводящую на экран ближайшее к 10 из двух чисел, записанных
-        в переменные m и n. Например, среди чисел 8, 5 и 11, 45 ближайшее к десяти 11, 45.*/
+        в переменные m и n. Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45.*/
 
     public static void twoTask() {
 
@@ -32,8 +32,12 @@ public class Lesson3 {
         double o = 11.2;
         double h = 10, y, u, m5 = 0;
 
-        y = h - i / h;
-        u = h - o / h;
+        if ((y = h - i)<0){
+            y = -y;
+        };
+        if((u = h - o) < 0){
+            u = -u;
+        };
         System.out.println(y < u ? i : o);
 
         //System.out.println((h - i) % h > (h - o) % h ? i : o);
