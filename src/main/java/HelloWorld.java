@@ -231,6 +231,7 @@ public class HelloWorld {
         System.out.print("Ответ: ");
 
 
+        Lesson4.twoTask();
 
         System.out.println("=================================================");
         System.out.println();

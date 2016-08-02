@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by Er on 26.07.2016.
  */
@@ -5,21 +8,32 @@ public class Lesson4 {
 
     /*Задачи*/
 
-        /*1. Создайте массив из всех нечётных чисел от 1 до 99, выведите его на экран в строку, а затем этот же
-        массив выведите на экран тоже в строку, но в обратном порядке (99 97 95 93 … 7 5 3 1).*/
+        //1. Создайте массив из всех нечётных чисел от 1 до 99, выведите его на экран в строку, а затем этот же
+        // массив выведите на экран тоже в строку, но в обратном порядке (99 97 95 93 … 7 5 3 1).
 
     public static void oneTask() {
 
-        int a = 1, b = 99, h = 0;
-        int[]d = new int[49];
+        int a = 1, b = 99, h = 0, t = 0;
         for (int i = a; i <= b; i++) {
             if (i % 2 != 0) {
                 h = h + 1;
-                d[h] = i;
-                System.out.print(" " + d[h]);
             }
         }
+        System.out.print("Кол-во элементов в массиве - " + h);
+
         System.out.println();
+        System.out.println();
+
+        /*int[]d = new int[h-1];
+        for (int i = a; i < b; i++) {
+            if (i % 2 != 0) {
+                t = t + 1;
+                d[t] = i;
+                System.out.print(" " + d[t]);
+            }
+        }*/
+
+        //System.out.println(Arrays.toString(d));
 
         /*for (int q = d.length; q >= 0; q--) {
             System.out.println(" " + d[q]);
@@ -31,17 +45,23 @@ public class Lesson4 {
         элементов и выведете это количество на экран на отдельной строке.*/
 
     public static void twoTask(){
-        int g = -1;
-        int[] w = new int[14];
-        for (int i = 0; i < w.length; i++){
-            w[i] = 5;
-                if (w[i]%2==0){
-                    g = g + 1;
-                }
-            System.out.println(w[i]);
+        int[] g = new int[15];
+        int a = 0, b = 9;
+        for (int i = a; i < g.length; i++){
+            int e = (int) (Math.random() * 10.0);
+            if (e%2 == 0) {
+                g[i] = e;
+            }
+            System.out.println("Случайное чисел в массиве " + (i+1) + " - " + g[i]);
         }
-        System.out.println("Четных чисел в массиве - " + g);
 
+        for (int z = 0; z < g.length; z++){
+            if (g[z] != 0){
+                System.out.println(" = " + g[z]);
+            }
+        }
+        System.out.println("Элементов в массиве - " + g.length);
+        System.out.println(Arrays.toString(g));
     }
 
         /*3. Для проверки остаточных знаний учеников после летних каникул, учитель младших классов решил начинать каждый урок с того,
@@ -49,6 +69,11 @@ public class Lesson4 {
         повторяться. В помощь учителю напишите программу, которая будет выводить на экран 15 примеров из таблицы умножения (от 2*2
         до 9*9, потому что задания по умножению на 1 и на 10 — слишком просты). При этом среди 15 примеров не должно быть
         повторяющихся (примеры 2*3 и 3*2 и им подобные пары считать повторяющимися).*/
+
+    public static void threeTask(){
+
+
+    }
 
         /*4. Создать двумерный массив из 6 строк по 7 столбцов в каждой из случайных целых чисел из отрезка [0;9].
         Вывести массив на экран.
