@@ -73,6 +73,9 @@ public class Lesson4 {
     public static void threeTask(){
 
 
+
+/*================ таблица умножения==================*/
+
         int y = 0, p = -1;
 
         for (int i = 2; i < 10; i++){
@@ -84,22 +87,46 @@ public class Lesson4 {
         }
         System.out.println(); System.out.println();
 
+/*========== Согластно задания==============*/
 
-        int[] z1 = new int[15];
-        int[] c1 = new int[15];
+        String[]x = new String[15];
 
         for (int i = 0; i < 15; i++) {
-            int z = (int) ((Math.random() * 100) % 10);
-            z1[i] = z;
-            int c = (int) ((Math.random() * 100) % 10);
-            c1[i] = c;
 
-            if (z1[i] != c1[i]) {
-                System.out.println("\t" + c + " * " + z + " = " + (c * z));
+            int a = (int) (Math.random() * 10.0);
+            int b = (int) (Math.random() * 10.0);
+            if (x[0] == null){
+             x[0] = a + " * " + b;
+            }else {
+                for (int e = 0; e < x.length; e++){
 
+
+                }
             }
+            System.out.println(x[0]);
         }
 
+
+
+
+        /*========== Согластно задания==============*/
+
+
+        /*int l = 5, z = 0;
+        int z1[] = new int[8];
+
+        if (z1.length <= 8){
+            z = (int) ((Math.random() * 100) % 5);
+            for (y = 0; y < z1.length; y++){
+                if (z1[y] != z){
+                    z1[y] = z;
+                    //System.out.println(" ISSE - " + z);
+                }else {
+                    y--;
+                }
+            }
+            System.out.println(Arrays.toString(z1));
+        }*/
     }
 
         /*4. Создать двумерный массив из 6 строк по 7 столбцов в каждой из случайных целых чисел из отрезка [0;9].
@@ -109,9 +136,55 @@ public class Lesson4 {
         важен (т.е. можно соврешить только одну перестановку, а можно отсортировать по убыванию каждую строку). Вывести
         преобразованный массив на экран.*/
 
+    public static void fourTask(){
+        int[][]q = new int[6][7];
+        for (int i = 0; i < q.length; i++){
+            for (int j = 0; j < q[i].length; j++){
+                q[i][j] = (int) (Math.random() * 10.0);
+                System.out.print("\t" + q[i][j]);
+            }
+            System.out.println();
+           // System.out.println(Arrays.sort(q));
+
+        }
+        System.out.println(Arrays.toString(q));
+
+    }
+
         /*5. Выясните экспериментальном путём, начиная с какого элемента последовательности Фибоначчи, вычисление с использованием
         рекурсии становится неприемлемым (занимает более минуты по времени).(Использовать для замера времени System.
         currentTimeMillis() который возвращает время в миллисекундах)*/
+
+    public static void fiveTask() {
+
+        // последовательности Фибоначчи
+        int a = 0;
+        int b = 1, m = 0, c = 8;
+
+        while (m < c) {
+            int w = a + b;
+            a = b;
+            b = w;
+            m++;
+            System.out.println(" " + w);
+            System.currentTimeMillis();
+
+        }
+        double d1 = System.currentTimeMillis();
+        System.out.println(" d1 - " + d1);
+        //использованием рекурсии
+        a = 1;
+        m = 1;
+        int  w = 1;
+        while (m <= 9){
+            w = w * m++;
+            System.out.print("  p - " +  w);
+
+        }
+        double d = System.currentTimeMillis();
+        System.out.println("\n" +"d - " + d);
+    }
+
 
         /*6. Создайте в классе Circle метод, вычисляющий длину окружности.*/
 
