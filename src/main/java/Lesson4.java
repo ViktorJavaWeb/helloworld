@@ -172,7 +172,7 @@ public class Lesson4 {
 
 
         //использованием рекурсии
-        a = 1;
+       /* a = 1;
         m = 1;
         int  w = 1;
         while (m <= 9){
@@ -182,9 +182,9 @@ public class Lesson4 {
         }
         double d = System.currentTimeMillis();
         System.out.println("\n" +"d - " + d);
+
+*/
     }
-
-
     /*=================== метод  последовательности Фибоначчи=================*/
     private static long fibonachi() {
 
