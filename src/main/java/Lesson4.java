@@ -157,21 +157,20 @@ public class Lesson4 {
 
     public static void fiveTask() {
 
+
+        long starTime = System.currentTimeMillis();
+
+        fibonachi();
+
+
         // последовательности Фибоначчи
-        int a = 0;
-        int b = 1, m = 0, c = 8;
 
-        while (m < c) {
-            int w = a + b;
-            a = b;
-            b = w;
-            m++;
-            System.out.println(" " + w);
-            System.currentTimeMillis();
 
-        }
-        double d1 = System.currentTimeMillis();
-        System.out.println(" d1 - " + d1);
+
+            double d1 = System.currentTimeMillis();
+            System.out.println(" d1 - " + d1);
+
+
         //использованием рекурсии
         a = 1;
         m = 1;
@@ -184,6 +183,32 @@ public class Lesson4 {
         double d = System.currentTimeMillis();
         System.out.println("\n" +"d - " + d);
     }
+
+
+    /*=================== метод  последовательности Фибоначчи=================*/
+    private static long fibonachi() {
+
+        int a = 0;
+        int b = 1, m = 0, c = 8;
+
+        while (m < c) {
+            int w = a + b;
+            a = b;
+            b = w;
+            m++;
+            System.out.println(" " + w);
+            System.currentTimeMillis();
+
+        }
+
+        return 0;
+    }
+
+
+
+
+
+
 
 
         /*6. Создайте в классе Circle метод, вычисляющий длину окружности.*/

@@ -291,4 +291,75 @@ public class HelloWorld {
         System.out.println();
 
     }
+
+
+    /*========== 03-08-2016=============*/
+
+   // для сравнения объектов используют equals,  для сравнения значений простых типов ислользуют "=="
+
+   //  создание клона происходит клонирование свойств, а не значения.
+    /*clone (){
+        Point p = new Point();
+        p.x = 0;
+        p.y = 0;
+        return p;
+    }*/
+
+       // .toString(); ссылка на объект
+
+    /*========== GET and SET============*/
+
+   /* class Circle {
+        private int r;
+
+        public int getRadius() {
+            return r;
+        }
+
+        public void setRadius(int r) {
+
+       this.r=r+5;
+
+            }
+    }
+    c1.Rarius = 5;
+    c1.setRadius(5);
+
+
+
+    extends - унаследование
+    implements - ревлизовать
+
+    //Абстрактные классы
+
+    public abstract class Jena{
+        public abstract int deposit(int a){
+
+        }
+    }
+    // создание нового класса наследник от class Jena
+
+    public class Vasa extends Jena{
+        public int deposit(int b){
+
+        }
+    }
+
+    //Интерфейсы
+
+    public interface Roma{
+
+        public void voice();
+
+        public static final PI = 3.14;// установление констант
+
+
+
+
+    }
+
+    */
+
+
+
 }
