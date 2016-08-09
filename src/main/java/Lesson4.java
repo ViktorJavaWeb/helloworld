@@ -1,10 +1,18 @@
+import javafx.scene.chart.PieChart;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
 
 /**
  * Created by Er on 26.07.2016.
  */
 public class Lesson4 {
+    private static int t6 = 3;
 
     /*Задачи*/
 
@@ -157,73 +165,173 @@ public class Lesson4 {
 
     public static void fiveTask() {
 
+        //System.nanoTime();
+ /*=================== метод  последовательности Фибоначчи=================*/
 
-        long starTime = System.currentTimeMillis();
+        double starTime1 = System.nanoTime();
+        System.out.println("starTime1 - " + starTime1);
 
-        fibonachi();
-
-
-        // последовательности Фибоначчи
-
-
-
-            double d1 = System.currentTimeMillis();
-            System.out.println(" d1 - " + d1);
+        long t = fibonachi(t6);
+        System.out.println("t - " + t);
 
 
-        //использованием рекурсии
-       /* a = 1;
-        m = 1;
-        int  w = 1;
-        while (m <= 9){
-            w = w * m++;
-            System.out.print("  p - " +  w);
+        double starTime2 = System.nanoTime();
+        System.out.println("starTime2 - " + starTime1);
 
-        }
-        double d = System.currentTimeMillis();
-        System.out.println("\n" +"d - " + d);
+        double starTimeOff = (starTime2 - starTime1);
+        System.out.println("Fibonachi - " + starTimeOff);
 
-*/
+/*=================== использованием рекурсии =================*/
+
+        double startTime = System.nanoTime();
+        System.out.println("startTime - " + startTime);
+
+        long y = fib(t6);
+        System.out.println("y - " + y);
+
+        double stopTime = System.nanoTime();
+        System.out.println("stopTime - " + stopTime);
+
+        double TimeOff = (stopTime - startTime);
+        System.out.println("Recursiy - " + TimeOff);
+
+        /*test(2);
+
+        double tRec1, tWhil1, t11, t22, offFib1, offFibonachi1;
+        t11 = System.currentTimeMillis()/1000;
+        fib(2);
+        offFib1 = System.currentTimeMillis()*1000;
+        tRec1 = offFib1 - t11;
+        System.out.println("tRec1 - " + tRec1);
+
+        t22 = System.currentTimeMillis()*1000;
+        fibonachi(2);
+        offFibonachi1 = System.currentTimeMillis()*1000;
+        tWhil1 = offFibonachi1 - t22;
+        System.out.println("tWhil1 - " + tWhil1);*/
+
     }
+
     /*=================== метод  последовательности Фибоначчи=================*/
-    private static long fibonachi() {
+    /*public static void test(int q) {
+        double tRec, tWhil, t1, t2, offFib, offFibonachi;
+        do {
+            t1 = System.nanoTime();
+            fib(q);
+            offFib = System.nanoTime();
+            tRec = offFib - t1;
+            System.out.println("tRec - " + tRec);
 
+            t2 = System.nanoTime();
+            fibonachi(q);
+            offFibonachi = System.nanoTime();
+            tWhil = offFibonachi - t2;
+            System.out.println("tWhil - " + tWhil);
+
+            System.out.println("q - " + q);
+
+
+            q++;
+        } while (tWhil  > tRec && q < 3);
+
+        System.out.println("fin - " + q);
+
+    }*/
+
+
+
+    private static int fibonachi(int c) {
         int a = 0;
-        int b = 1, m = 0, c = 8;
-
+        int b = 1, m = 0;
+        int w =0;
         while (m < c) {
-            int w = a + b;
+            w = a + b;
             a = b;
             b = w;
             m++;
-            System.out.println(" " + w);
-            System.currentTimeMillis();
-
+            //System.out.println(" " + w);
         }
-
-        return 0;
+        return w;
     }
 
+    /*=================== использованием рекурсии =================*/
 
-
-
-
-
-
+    private static int fib(int n) {
+        if (n <= 1) {
+            return 1;
+        }else {
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
 
         /*6. Создайте в классе Circle метод, вычисляющий длину окружности.*/
+
+    public static void sixTask(){
+        // 2Pi*r;
+        double r = 50.0;
+        circle(r);
+
+    }
+
+    private static double circle(double r) {
+        double l = 2*Math.PI*r;
+        System.out.println(l);
+        return 0;
+    }
 
         /*7. Создайте в классе Circle метод, перемещающий центр круга в случайную точку квадрата координатной плоскости с
         диагональю от [-99;-99] до [99;99]. Обратите внимание на то, что требуется создать обычный метод, применимый к
         уже существующему объекту, а не конструктор создающий новый объект.*/
 
-        /*8. Измените в классе Circle конструктор по умолчанию так, чтобы в момент создания объекта с его помощью, координаты центра и
-        радиус окружности пользователь вводил с клавиатуры.*/
+   public static void sevenTask(){
+
+       int r = 20;
+       double x = Math.random()*10;
+       double y = Math.random()*10;
+
+       circle(r);
+   }
+
+        /*8. Измените в классе Circle конструктор по умолчанию так, чтобы в момент создания объекта с его помощью,
+        координаты центра и радиус окружности пользователь вводил с клавиатуры.*/
+    public static void eightTask() throws IOException {
+
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Введите число - ");
+        String x1 = reader.readLine();
+        int x = Integer.parseInt(x1);
+
+        System.out.print("Введите число - ");
+        String y1 = reader.readLine();
+        int y = Integer.parseInt(y1);
+
+        System.out.print("Введите число - ");
+        String r1 = reader.readLine();
+        int r = Integer.parseInt(r1);
+
+        System.out.println("x - " + x + ", y - " + y + ", r - " + r);
+
+        circle(r);
+
+    }
+
 
         /*9. Создайте в классе Circle метод, вычисляющий расстояние между центрами двух окружностей.*/
 
+    public static void nineTask(){
+
+
+        }
+
         /*10. Создайте в классе Circle метод, проверяющий, касаются ли окружности в одной точке. Учтите, что возможен
         вариант, когда одна окружность содержится внутри другой и при этом всё равно возможно касание в одной точке.*/
+
+    public static void tenTask(){
+
+
+        }
 
 
 
