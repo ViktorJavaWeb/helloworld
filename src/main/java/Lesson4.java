@@ -168,31 +168,31 @@ public class Lesson4 {
         //System.nanoTime();
  /*=================== метод  последовательности Фибоначчи=================*/
 
-        double starTime1 = System.nanoTime();
+        long starTime1 = System.currentTimeMillis();
         System.out.println("starTime1 - " + starTime1);
 
         long t = fibonachi(t6);
         System.out.println("t - " + t);
 
 
-        double starTime2 = System.nanoTime();
+        long starTime2 = System.currentTimeMillis();
         System.out.println("starTime2 - " + starTime1);
 
-        double starTimeOff = (starTime2 - starTime1);
+        long starTimeOff = (starTime2 - starTime1);
         System.out.println("Fibonachi - " + starTimeOff);
 
 /*=================== использованием рекурсии =================*/
 
-        double startTime = System.nanoTime();
+        long startTime = System.nanoTime();
         System.out.println("startTime - " + startTime);
 
         long y = fib(t6);
         System.out.println("y - " + y);
 
-        double stopTime = System.nanoTime();
+        long stopTime = System.nanoTime();
         System.out.println("stopTime - " + stopTime);
 
-        double TimeOff = (stopTime - startTime);
+        long TimeOff = (stopTime - startTime);
         System.out.println("Recursiy - " + TimeOff);
 
         /*test(2);
@@ -294,6 +294,7 @@ public class Lesson4 {
 
         /*8. Измените в классе Circle конструктор по умолчанию так, чтобы в момент создания объекта с его помощью,
         координаты центра и радиус окружности пользователь вводил с клавиатуры.*/
+
     public static void eightTask() throws IOException {
 
 

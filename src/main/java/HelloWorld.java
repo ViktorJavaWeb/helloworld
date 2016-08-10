@@ -2,48 +2,7 @@ import java.io.IOException;
 
 public class HelloWorld {
     public static void main(String[] argt) throws IOException {
-      /*  System.out.println("Hello world");
-        boolean tert = true;
-        System.out.println(tert);
 
-        float r = 3.14f;
-        double t = 3.14;
-        System.out.println(r);
-        System.out.println(t);
-
-        char a = 'c';
-        System.out.println(a);
-
-        //----- ??????????????? ? ?????? ???? ? ??????
-        double d = 0.6;
-        int i = 5;
-        d = (double) i;  //? ????? ??????. ?????? ????. ????. double
-        System.out.println("    " + d + "   ");
-        //-----
-
-        try {
-            Byte b1 = new Byte("10");
-            System.out.println(b1);
-        } catch (NumberFormatException e) {
-            System.err.println("???????? ?????? ??????!");
-        }
-
-        String str1 = "111";
-        try {
-            Byte b2 = Byte.valueOf(str1);
-            System.out.println(b2);
-        } catch (NumberFormatException e) {
-            System.err.println("???????? ?????? ??????!");
-        }
-
-        System.out.println(9.0 / 2);*/
-
-
-    /*??????
-
-
-       /*===========================================*/
-        /*===========================================*/
 
         /*================================ Второй урок============*/
 
@@ -399,6 +358,12 @@ public class HelloWorld {
         public void voice();
 
         public static final PI = 3.14;// установление констант
+
+
+
+ ========== 10-08-2016=============
+
+
 
 
 

@@ -1,8 +1,11 @@
+/*
 import java.io.PrintStream;
 
+*/
 /**
  * Created by ustenko on 10.08.16.
- */
+ *//*
+
 public class Person {
     String name;
 
@@ -51,6 +54,7 @@ public class Person {
         return String.format("Hi s%, my name is s%", name, yourName);
     }
 }
+*/
 
 
 
